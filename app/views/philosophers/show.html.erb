@@ -1,34 +1,35 @@
 <div class="container mt-3">
+
   <div class="row justify-content-center">
+
     <div class="card text-center">
       <div class="card-header bg-secondary">
         <h1 style="color: white;">
           <%= @philosopher.name %>
         </h1>
       </div>
+        <div class="card-body">
 
-      <div class="card-body">
-        <%#=  cl_image_tag @philosopher.photo.key, width: 348, height: 124, class: "card-img-top mb-3" %>
-        <h5 class="card-title"><%= @philosopher.name %></h5>
-        <h5 class="card-title"><%= @philosopher.quote %></h5>
-        <% @philosopher.bookings.each do |booking| %>
-        <p class="card-text">Philosopher's agent:</p>
-        <p class="card-text"><%= booking.user_id.name %></p>
-        <p class="card-text"><%= booking.user_id.name %></p>
-        <%= link_to "Delete Dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-        <% end %>
+          <%#=  cl_image_tag @philosopher.photo.key, width: 348, height: 124, class: "card-img-top mb-3" %>
+
+          <% @bookings.philosophers.each do |philosopher| %>
+          <p class="card-text">Agent: <%= philosopher.user_id.name %></p>
+          <p class="card-text">Reserve him!</p>
+          <%#= link_to "Delete Dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %>
+
+          <h5 class="card-title"><%= @philosopher.quote %></h5>
+          
+        </div>
+      
       </div>
-
-    </div>    
+    </div>
   </div>
 </div>
 
 <div class="text-center mt-3">
-
-  <%= link_to "Book it!", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
-  <%= link_to "Edit Philosopher", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
-  <%= link_to "Edit Philosopher", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
-  <%= link_to "Delete Philosopher #{@philosopher.name}", "/", method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
+  <%= link_to "Reserve", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
+  <%= link_to "Reviews", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
+  <%= link_to "Edit #{@philosopher.name}", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
   <%= link_to "Return", "/", class: "btn btn-secondary btn-lg text-center mb-5" %>
-
 </div>
