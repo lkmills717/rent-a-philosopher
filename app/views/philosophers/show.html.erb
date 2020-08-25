@@ -13,18 +13,12 @@
           <%#=  cl_image_tag @philosopher.photo.key, width: 348, height: 124, class: "card-img-top mb-3" %>
 
           <h5 class="card-title"><%= @philosopher.quote %></h5>
-
-          <% @philosopher.bookings.each do |booking| %>
-          <p class="card-text">Agent: <%= booking.user_id.name %></p>
-          <p class="card-text">Reserve him!</p>
-          <%#= link_to "Delete Dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-          <% end %>
           
         </div>
       
       </div>
-    </div>    
-  </div>  
+    </div>
+  </div>
 </div>
 
 <div class="text-center mt-3">
