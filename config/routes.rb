@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :philosophers do
     resources :reviews, only: [ :new, :create ]
   end
-
-  resources :philosophers do
+  resources :philosophers
     resources :bookings, only: [ :new, :create, :destroy ]
 end
