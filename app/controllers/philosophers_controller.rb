@@ -8,6 +8,7 @@ class PhilosophersController < ApplicationController
 
     def show
         @philosopher = Philosopher.find(params[:id])
+        @booking = Booking.new
     end
 
     def new
@@ -20,7 +21,7 @@ class PhilosophersController < ApplicationController
         if @philosopher.save
             redirect_to philosopher_path(@philosopher)
           else
-            render :new
+            render 'new'
         end
     end
 
