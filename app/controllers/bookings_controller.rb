@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
         @booking.philosopher = @philosopher
         @booking.user = @user
         if @booking.save
-            flash[:notice] = 'You have successfully booked #{@philosopher_name}'
+            flash[:notice] = 'You have successfully booked a mind blowing philosophical experience!'
             redirect_to philosopher_path(@philosopher)
         else
             render :new
