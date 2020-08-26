@@ -23,7 +23,7 @@
 </div>
 
 <div class="text-center mt-3">
-  <%= link_to "Reserve", "/philosophers/:philosopher_id/bookings/new", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
+  <%= link_to "Reserve", new_philosopher_booking_path(@philosopher), class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
   <%= link_to "Reviews", "/reviews/new", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
   <%= link_to "Edit #{@philosopher.name}", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
   <%= link_to "Return", "/", class: "btn btn-secondary btn-lg text-center mb-5" %>

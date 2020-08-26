@@ -1,18 +1,24 @@
 class BookingsController < ApplicationController
+    def new
+        @booking = Booking.new
+        @philosopher = Philosopher.find(params[:philosopher_id])
+    end
+
     def create
-        @philosopher = Philosopher.find(:philosopher_id)
+        @philosopher = Philosopher.find(params[:philosopher_id])
+        @user = current_user
         @booking = Booking.new(booking_params)
         @booking.philosopher = @philosopher
+        @booking.user = @user
         if @booking.save
             redirect_to philosopher_path(@philosopher)
         else
-            @user = User.new
-            render "philosophers/show"
+            render :new
         end
     end
 
     private
     def booking_params
-        params.require(:booking).permit(:user_id, :philosopher_id)
+        params.require(:booking).permit(:date)
     end
 end

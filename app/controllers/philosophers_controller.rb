@@ -1,5 +1,7 @@
 class PhilosophersController < ApplicationController
     before_action :set_philosopher, only: [:show, :edit, :update, :destroy]
+    skip_before_action :authenticate_user!, only: [:index, :show] 
+    
     def index
         @philosophers = Philosopher.all 
     end

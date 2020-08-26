@@ -1,1 +1,5 @@
-<h3>Make a booking with #{@philosopher.name}!</h3>
+<h3>Make a booking</h3>
+<%= simple_form_for [@philosopher, @booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
