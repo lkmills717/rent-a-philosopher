@@ -1,6 +1,5 @@
 .navbar-lewagon {
   justify-content: space-between;
-  align-items: center;
   background: white;
 }
 
@@ -12,16 +11,30 @@
   width: 40px;
 }
 
-h1 {
-  // font-family: 'MedievalSharp', cursive;
-  text-align: center;
-}
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   align-items: center;
+//   background: white;
+// }
 
-a,li {
-  text-decoration: none;
-  cursor: pointer;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
-li {
-  // font-family: 'Lato', sans-serif;
-}
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
+
+// h1 {
+//   // font-family: 'MedievalSharp', cursive;
+//   text-align: center;
+// }
+
+// a,li {
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+
+// li {
+//   // font-family: 'Lato', sans-serif;
+// }
