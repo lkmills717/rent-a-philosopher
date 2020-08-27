@@ -3,44 +3,47 @@
     <%= image_tag "https://image.flaticon.com/icons/svg/570/570631.svg" %>
   <% end %>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active mr-5 search-bar">
-            <%= form_tag %>
-            <%= text_field_tag :name %>
-            <%= submit_tag "search", class: "btn btn-secondary" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Home", "/", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Philosophers", philosophers_path, class: "nav-link" %>
-          </li>
-          <% if user_signed_in? %>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://image.flaticon.com/icons/svg/647/647573.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Your Profile", new_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
-              <%= link_to "Log Out", new_user_registration_path, class: "dropdown-item" %>
-            </div>
-          </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
-            </li>
-            <li>
-              <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active mr-5 search-bar">
+
+        <%= form_tag philosophers_path, method: :get do %>
+          <%= text_field_tag :query, params[:query] %>
+          <%= submit_tag "search", class: "btn btn-secondary" %>
+        <% end %>
+
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Home", "/", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Philosophers", philosophers_path, class: "nav-link" %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <%= image_tag "https://image.flaticon.com/icons/svg/647/647573.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Your Profile", new_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
+            <%= link_to "Log Out", new_user_registration_path, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 
 </div>
 
