@@ -1,3 +1,44 @@
-<h1>Profile</h1>
+<div class="text-center">
+  <h1>Profile</h1>
+  <h2>User email| <%= current_user.email %></h2>
+</div>
 
-<h2>User email| <%= current_user.email %></h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <div id="bookings">
+      	<h3>Bookings Past</h3>
+        <% @past_bookings.each do |booking| %>
+        <div class="card-product">
+		 <img src="https://i.imgur.com/OELHk5p.jpg" />
+		  <div class="card-product-infos">
+		    <h2><%= booking.date %> <%= booking.philosopher.name %></h2>
+		    <p><%= booking.philosopher.quote %></p>
+		  </div>
+		</div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <div id="bookings">
+      	<h3>Bookings Pending</h3>
+        <% @future_bookings.each do |booking| %>
+        <div class="card-product">
+		 <img src="https://i.imgur.com/OELHk5p.jpg" />
+		  <div class="card-product-infos">
+		    <h2><%= booking.date %> <%= booking.philosopher.name %></h2>
+		    <p><%= booking.philosopher.quote %></p>
+		  </div>
+		</div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
