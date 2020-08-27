@@ -1,9 +1,38 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/WOmnv1x.png);">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
 
-  <div class="container text-center">
-    <h1>We are what we repeatedly do. <br> Excellence, then, is not an act, but a habit</h1>
-    <p>Find englightenment in the company of a classic Greek Philosopher.</p>
-    <%= link_to "See the Philosophers", philosophers_path, class: "btn btn-flat join-in" %>
-    <%# <a class="btn btn-flat join-in" href="#">See the philosophers!</a> %>
+    <div class="carousel-item active">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/WOmnv1x.png);">
+          <div class="container text-center">
+            <h1>We are what we repeatedly do. <br> Excellence, then, is not an act, but a habit.</h1>
+            <p>Find englightenment in the company of a classic Greek Philosopher.</p>
+            <%= link_to "See the Philosophers", philosophers_path, class: "btn btn-flat join-in" %>
+            <%# <a class="btn btn-flat join-in" href="#">See the philosophers!</a> %>
+          </div>
+        </div>
+      </div>
+    <div class="carousel-item">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/P5t86sj.png);">
+          <div class="container text-center">
+            <h1>The only true wisdom is in knowing you know nothing.</h1>
+            <p>Help others find true wisdom with your philosophers.</p>
+            <%= link_to "Register your philosopher", philosophers_path, class: "btn btn-flat join-in" %>
+            <%# <a class="btn btn-flat join-in" href="#">See the philosophers!</a> %>
+          </div>
+        </div>
+      </div>
+
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
