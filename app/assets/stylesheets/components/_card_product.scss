@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 75vh;
+  height: 50vh;
   width: 50vw;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -36,9 +36,15 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 30px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.card-product .card-product-infos h2 {
+  align-items: flex-end;
 }
 
 .card-product .btn {
@@ -55,4 +61,16 @@
 
 .card-product .btn:hover {
   opacity: 1;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 992px) {
+  .card-product {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    height: 75vh;
+    width: 75vw;
+  }
 }
