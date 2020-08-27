@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :reviews, only: [ :new, :create ]
     resources :bookings, only: [ :new, :create, :destroy ]
   end
-
+	get'/dashboard', to: "users#dashboard"
 end
