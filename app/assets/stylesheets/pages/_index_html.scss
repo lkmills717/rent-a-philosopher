@@ -1,0 +1,30 @@
+.btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 15px -10px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: #f4511e;
+}
+
+a {
+  color: #F4F4F4;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f4511e;
+  opacity: 0.9;
+}

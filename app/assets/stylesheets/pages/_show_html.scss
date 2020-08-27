@@ -1,0 +1,15 @@
+.philosopher-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.philosopher-btns .btn {
+  width: 200px;
+}
+
+@media (min-width: 100px) and (max-width: 992px) {
+  .philosopher-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

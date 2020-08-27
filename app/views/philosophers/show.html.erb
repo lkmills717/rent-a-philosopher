@@ -1,30 +1,26 @@
 <div class="container mt-3">
 
-  <div class="row justify-content-center">
+  <div class="card-product">
+    <img src="https://i.imgur.com/OELHk5p.jpg" />
 
-    <div class="card text-center">
-      <div class="card-header bg-secondary">
-        <h1 style="color: white;">
-          <%= @philosopher.name %>
-        </h1>
-      </div>
-        <div class="card-body">
+    <%#=  cl_image_tag @philosopher.photo.key, width: 348, height: 124, class: "card-img-top mb-3" %>
 
-          <%#=  cl_image_tag @philosopher.photo.key, width: 348, height: 124, class: "card-img-top mb-3" %>
-          <h5 class="card-title"><%= @philosopher.quote %></h5>
-          <p class="card-text">Agent: <%= @philosopher.user.name %></p>
-          <p class="card-text">Reserve him!</p>
-          <%#= link_to "Delete Dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
-        </div>
-      
-      </div>
+    <div class="card-product-infos">
+      <h3><%= "'#{@philosopher.quote}'"  %></p>
+      <h2><%= "- #{@philosopher.name}" %></h2>
+      <p class="card-text">Agent: <%= @philosopher.user.name %></p>
+      <p class="card-text">Really helpful with: <%#= @philosopher.specialization %></p>
+      <%= link_to "Reserve #{@philosopher.name}", new_philosopher_booking_path(@philosopher), class: "btn btn-secondary btn-lg m-5" %>
     </div>
   </div>
-</div>
 
-<div class="text-center mt-3">
-  <%= link_to "Reserve", new_philosopher_booking_path(@philosopher), class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
-  <%= link_to "Reviews", "/reviews/new", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
-  <%= link_to "Edit #{@philosopher.name}", "/", class: "btn btn-secondary btn-lg text-center mb-5 mr-2" %>
-  <%= link_to "Return", "/", class: "btn btn-secondary btn-lg text-center mb-5" %>
+  <div class="philosopher-btns m-5">
+
+  <%= link_to "Reviews", "/reviews/new", class: "btn btn-secondary btn-lg text-center m-1" %>
+
+    <%= link_to "Edit #{@philosopher.name}", "/", class: "btn btn-secondary btn-lg text-center m-1" %>
+
+    <%= link_to "Return", "/", class: "btn btn-secondary btn-lg text-center m-1" %>
+
+  </div>
 </div>

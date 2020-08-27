@@ -1,26 +1,29 @@
 <div class="container">
   
-  <div class="row justify-content-center">
+  <div class="row opener justify-content-center">
     <div class="col-6">
-     <h1>Those who know, do. Those that understand, teach.</h1>
+     <h1 class="index-quote">Those who know, do. <br> Those that understand, teach.</h1>
+     <br>
      <p>Book some time with one of the famous Greek Philosophers right out of golden age!</p>  
     </div>
   </div>
 
-  <div class="row justify-content-center align-items-center">    
-
-    <% @philosophers.each do |philosopher| %>
-      <div class="card text-center col-xm-12 col-sm-4 m-3" style="width: 18rem;">
-
-          <%# if philosopher.photo.attached?  %>
-          <%#=  cl_image_tag philosopher.photo.key, width: 348, height: 124, class: "card-img-top" %>
-          <%# end %>
-
-          <div class="card-body">
-            <h5 class="card-title"><%= philosopher.name  %></h5>
-            <%= link_to "Check out #{philosopher.name}", "/philosophers/#{philosopher.id}", class: "btn btn-secondary btn-lg text-center" %>
-          </div>
-      </div>
-    <% end %>
+  <div class="row justify-content-center align-items-center">
+    <div class="cards mb-3">
+      <% @philosophers.each do |philosopher| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.imgur.com/OELHk5p.jpg)">
+          <%= link_to "#{philosopher.name}", "/philosophers/#{philosopher.id}", class: "text-center" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
+
+
+
+
+  
+
+<%# if philosopher.photo.attached?  %>
+<%#=  cl_image_tag philosopher.photo.key, width: 348, height: 124, class: "card-img-top" %>
+<%# end %>

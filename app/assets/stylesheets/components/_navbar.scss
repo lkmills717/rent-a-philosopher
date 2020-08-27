@@ -11,30 +11,55 @@
   width: 40px;
 }
 
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   align-items: center;
-//   background: white;
-// }
+.navbar-lewagon .btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  opacity: 0.6;
+  transition: 0.3s;
+  padding: 4px;
+  padding-bottom: 2px;
+}
 
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
+.navbar-lewagon .btn:hover {
+  opacity: 1;
+}
 
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar-lewagon ul {
+    text-align: center;
+  }
+  .search-bar {
+    margin-left: 50px;
+  }
+}
 
-// h1 {
-//   // font-family: 'MedievalSharp', cursive;
-//   text-align: center;
-// }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .navbar-lewagon ul {
+    text-align: center;
+  }
+}
 
-// a,li {
-//   text-decoration: none;
-//   cursor: pointer;
-// }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .navbar-lewagon ul {
+    text-align: center;
+  }
+}
 
-// li {
-//   // font-family: 'Lato', sans-serif;
-// }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .navbar-lewagon ul {
+    text-align: center;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .navbar-lewagon ul {
+    text-align: center;
+  }
+}
