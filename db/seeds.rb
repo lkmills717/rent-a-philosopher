@@ -34,7 +34,6 @@ puts "Calling students . . ."
       philosopher = Philosopher.create!(
         name: Faker::GreekPhilosophers.name,
         quote: Faker::GreekPhilosophers.quote,
-        coin: Faker::Coin.coin,
         user_id: agent.id
       )
   end
