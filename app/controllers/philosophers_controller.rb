@@ -17,7 +17,9 @@ class PhilosophersController < ApplicationController
 
     def create
         @philosopher = Philosopher.new(philosopher_params)
-        @philosopher.save
+        current_user.role = "agent"
+        current_user.save
+        @philosopher.user_id = current_user.id
         if @philosopher.save
             redirect_to philosopher_path(@philosopher)
           else
