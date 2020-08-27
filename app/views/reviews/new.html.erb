@@ -1,0 +1,8 @@
+<div class ="container">
+<h3>Leave a review for <%= @philosopher.name%></h3>
+<%= simple_form_for [@philosopher, @review] do |f| %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.input :content, label: "Tell us more about your time with #{@philosopher.name}:" %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
+</div>
