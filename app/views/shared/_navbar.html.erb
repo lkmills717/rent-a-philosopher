@@ -11,9 +11,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active mr-5 search-bar">
-            <%= form_tag %>
-            <%= text_field_tag :name %>
-            <%= submit_tag "search", class: "btn btn-secondary" %>
+
+              <%= form_tag %>
+              <%= text_field_tag :name %>
+              <%= submit_tag "search", class: "btn btn-secondary" %>
+
           </li>
           <li class="nav-item active">
             <%= link_to "Home", "/", class: "nav-link" %>
