@@ -1,0 +1,7 @@
+<%= simple_form_for @philosopher do |element| %>
+  <%= element.input :name %>
+  <%= element.input :quote %>
+  <%= element.submit %>
+<% end %>
+
+<%= link_to "Return", "/philosopher/#{@philosopher.id}" %>
