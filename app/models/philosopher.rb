@@ -4,4 +4,5 @@ class Philosopher < ApplicationRecord
   has_many :bookings, dependent: :destroy
   validates :name, presence: true
   validates :quote, presence: true
+  validates :worth, presence: true
 end
