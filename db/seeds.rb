@@ -1,5 +1,9 @@
 require 'faker'
 
+Booking.delete_all
+
+Review.delete_all
+
 puts "Sending philosophers back . . ."
 
 Philosopher.delete_all
@@ -30,10 +34,12 @@ puts "Calling students . . ."
     role: "agent"
     )
     puts "Time travelling philosophers . . ."
-    6.times do
+    10.times do
       philosopher = Philosopher.create!(
         name: Faker::GreekPhilosophers.name,
         quote: Faker::GreekPhilosophers.quote,
+        worth: rand(0..100),
+        currency: Faker::Creature::Animal.name,
         user_id: agent.id
       )
   end

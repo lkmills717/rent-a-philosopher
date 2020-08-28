@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :bookings, dependent: :destroy
-  has_many :philosophers, through: :bookings
+  has_many :philosophers, through: :bookings, dependent: :destroy
   # user = ["student", "agent"]
   # validates :role, inclusion: { in %w(student agent) }
 end
