@@ -35,24 +35,33 @@
 
   </div>
 
-  <h3>Reviews</h3>
-  <% if @philosopher.reviews.empty? %>
-    <p>Be the first to leave a review 🐣</p>
-  <%else %>
-    <ul class="list-group">
-      <% @philosopher.reviews.each do |review| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="badge badge-primary badge-pill">
-            <% counter = 0 %>
-            <% 5.times do %>
-              <i class="fa <%=review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-              <% counter += 1 %>
-            <% end %>
-          </span>
-          <%= review.content %>
-        </li>
+  <div class="card-product">
+
+    <%#=  cl_image_tag @philosopher.photo.key, width: 348, height: 124, class: "card-img-top mb-3" %>
+
+    <div class="card-product-infos">
+      <h3>Reviews</h3>
+      <% if @philosopher.reviews.empty? %>
+        <p>Be the first to leave a review 🐣</p>
+      <%else %>
+        <ul class="list-group w-100">
+          <% @philosopher.reviews.each do |review| %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="badge badge-primary badge-pill" style="background: white">
+                <% counter = 0 %>
+                <% 5.times do %>
+                  <i class="fa <%=review.rating > counter ? 'fa-star' : 'fa-star-o' %>" style="color: #f4511e"></i>
+                  <% counter += 1 %>
+                <% end %>
+              </span>
+              <%= "'#{review.content}'" %>
+              <%= "by #{review.user.name}" %>
+            </li>
+          <% end %>
+        </ul>
       <% end %>
-    </ul>
-  <% end %>
+    </div>
+
+  
 </div>
 </div>
