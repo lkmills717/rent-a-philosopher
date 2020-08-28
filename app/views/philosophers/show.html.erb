@@ -10,6 +10,7 @@
       <h2><%= "- #{@philosopher.name}" %></h2>
       <p class="card-text">Agent: <%= @philosopher.user.name %></p>
       <%= link_to "Reserve #{@philosopher.name}", new_philosopher_booking_path(@philosopher), class: "btn btn-secondary btn-lg m-5" %>
+      <h2 class = "card-text">Price: <%= @philosopher.worth %> <%= @philosopher.currency.pluralize %> per day💰</h3>
     </div>
   </div>
 
