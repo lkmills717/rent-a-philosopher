@@ -5,6 +5,7 @@ class Philosopher < ApplicationRecord
   validates :name, presence: true
   validates :quote, presence: true
   validates :worth, presence: true
+  validates :currency, presence: true
   include PgSearch::Model
   pg_search_scope :search_by_name_and_quote,
     against: [ :name, :quote ],
