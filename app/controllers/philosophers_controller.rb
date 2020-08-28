@@ -50,7 +50,7 @@ class PhilosophersController < ApplicationController
 
     private
     def philosopher_params
-        params.require(:philosopher).permit(:id, :name, :quote, :worth, :price)
+        params.require(:philosopher).permit(:id, :name, :quote, :worth, :currency)
     end
 
     def set_philosopher
