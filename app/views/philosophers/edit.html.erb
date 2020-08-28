@@ -1,6 +1,8 @@
 <%= simple_form_for @philosopher do |element| %>
   <%= element.input :name %>
   <%= element.input :quote %>
+  <%= element.input :worth %>
+  <%= element.input :currency %>
   <div class="text-center  my-5">
     <%= element.submit class: "btn btn-secondary btn-lg" %>
     <%= link_to "Return", philosophers_path, class: "btn btn-secondary btn-lg" %>
