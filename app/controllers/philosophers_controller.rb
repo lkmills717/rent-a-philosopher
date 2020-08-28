@@ -3,7 +3,12 @@ class PhilosophersController < ApplicationController
     skip_before_action :authenticate_user!, only: [:index, :show] 
     
     def index
-        @philosophers = Philosopher.all 
+        @philosophers = Philosopher.all
+        if params[:query].present?
+           @philosophers = .search_by_name_and_quote(params[:query])
+            else
+              @movies = Philosopher.all
+        end
     end
 
     def show

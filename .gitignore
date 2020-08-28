@@ -40,3 +40,8 @@ yarn-debug.log*
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
+
+PSEUDOCODE.txt
+1.	Add  gem 'pg_search', '~> 2.3.0'  to Gem file
+2.	bundle install
+3.	
