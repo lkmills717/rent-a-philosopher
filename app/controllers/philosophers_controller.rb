@@ -25,6 +25,7 @@ class PhilosophersController < ApplicationController
         current_user.save
         @philosopher.user_id = current_user.id
         if @philosopher.save
+            flash[:notice] ="🎉 Thank you for letting #{@philosopher.name} provide wisdom to others!🦉"
             redirect_to philosopher_path(@philosopher)
           else
             render 'new'
