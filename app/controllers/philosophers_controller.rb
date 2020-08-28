@@ -11,7 +11,7 @@ class PhilosophersController < ApplicationController
     end
 
     def show
-        @philosopher = Philosopher.find(params[:id])
+        # @philosopher = Philosopher.find(params[:id])
         @booking = Booking.new
     end
 
@@ -50,7 +50,7 @@ class PhilosophersController < ApplicationController
 
     private
     def philosopher_params
-        params.require(:philosopher).permit(:id, :name, :quote)
+        params.require(:philosopher).permit(:id, :name, :quote, :worth, :price)
     end
 
     def set_philosopher
