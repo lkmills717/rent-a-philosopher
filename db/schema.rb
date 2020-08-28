@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_125724) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "worth"
+    t.integer "worth"
     t.string "currency"
     t.index ["user_id"], name: "index_philosophers_on_user_id"
   end
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_125724) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "password"
     t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

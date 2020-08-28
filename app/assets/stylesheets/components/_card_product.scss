@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 50vh;
+  // height: 50vh;
   width: 50vw;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -12,7 +12,7 @@
 .card-product img {
   max-width: 45%;
   max-height: 80%;
-  margin: 10px;
+  margin: 75px;
 }
 
 .card-product h2 {
@@ -33,6 +33,10 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+}
+
+.card-product li {
+  margin: 20px 0;
 }
 
 .card-product .card-product-infos {

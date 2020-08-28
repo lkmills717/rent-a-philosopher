@@ -1,7 +1,7 @@
 <div class="container">
   
-  <div class="row opener justify-content-center">
-    <div class="col-6">
+  <div class="row opener text-center justify-content-center">
+    <div class="col-8">
      <h1 class="index-quote">Those who know, do. <br> Those that understand, teach.</h1>
      <br>
      <p>Book some time with one of the famous Greek Philosophers right out of golden age!</p>  
@@ -9,7 +9,7 @@
   </div>
 
   <div class="row justify-content-center align-items-center">
-    <div class="cards mb-3">
+    <div class="cards mb-5 w-100">
       <% @philosophers.each do |philosopher| %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.imgur.com/OELHk5p.jpg)">
           <%= link_to "#{philosopher.name}", "/philosophers/#{philosopher.id}", class: "text-center" %>
